@@ -1,0 +1,886 @@
+/* about.css - Styles specific to the about.html page */
+body {
+    background-image: url('opop.gif');
+    background-repeat: repeat; /* Add this line to repeat the background */
+    background-size: auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    background-color: red;
+    background-image: url("opop.gif");
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00ffcc, #0033ff);
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: colorShift 10s infinite, thumbPulse 2s infinite;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #00ffcc, #00cc66);
+    animation: glowing 1.5s infinite, thumbRotate 3s infinite, thumbPulse 1s infinite;
+  }
+  
+  @keyframes glowing {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(0, 204, 102, 0.8),
+                  0 0 20px rgba(0, 204, 102, 0.4),
+                  0 0 30px rgba(0, 204, 102, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 204, 102, 0.4),
+                  0 0 30px rgba(0, 204, 102, 0.2),
+                  0 0 40px rgba(0, 204, 102, 0.1);
+    }
+  }
+  
+  @keyframes thumbRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @keyframes colorShift {
+    0%, 100% {
+      background: linear-gradient(135deg, #00ffcc, #0033ff);
+    }
+    25% {
+      background: linear-gradient(135deg, #0033ff, #ff3399);
+    }
+    50% {
+      background: linear-gradient(135deg, #ff3399, #00ffcc);
+    }
+    75% {
+      background: linear-gradient(135deg, #00ffcc, #ff3399);
+    }
+  }
+  
+  @keyframes thumbPulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+
+
+
+/* Add these styles to about.css */
+.language-selector {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+}
+
+.selected-language {
+    color: white;
+    cursor: pointer;
+}
+
+.language-options {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.language-option {
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.2s;
+}
+
+.language-option:hover {
+    background-color: #555;
+}
+
+
+
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Adjust the size of the GIF as needed */
+.gif-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+        /* Keyframes for color animations */
+        @keyframes changeColor1 {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: orange; }
+            100% { color: purple; }
+        }
+
+        @keyframes changeColor2 {
+            0% { color: green; }
+            25% { color: orange; }
+            50% { color: purple; }
+            75% { color: red; }
+            100% { color: blue; }
+        }
+
+        /* Styles specific to the element with the animation */
+.element-with-animation {
+    animation: changeColor1 5s infinite;
+}
+
+        /* Add more keyframes for additional color variations */
+
+        /* Apply animations to each letter and its line */
+        .letter-container {
+            display: inline-block;
+        }
+
+        .letter-1 {
+            animation: changeColor1 8s infinite;
+        }
+
+        .letter-2 {
+            animation: changeColor2 8s infinite;
+        }
+
+        /* Add more classes for other letters */
+
+p1 {
+    color: blue;
+}
+
+p2 {
+    color: green;
+}
+
+p3 {
+    color: red;
+}
+
+p4 {
+    color: orange;
+}
+
+p5 {
+    color: purple;
+}
+
+p6 {
+    color: teal;
+}
+
+p7 {
+    color: brown;
+}
+
+p8 {
+    color: magenta;
+}
+
+p9 {
+    color: maroon;
+}
+
+p10 {
+    color: darkgreen;
+}
+
+/* Style for the title tooltip */
+.discord-server .join-button[title] {
+    position: relative;
+    z-index: 1;
+}
+
+.discord-server .join-button[title]:before {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.discord-server .join-button[title]:hover:before {
+    opacity: 1;
+}
+
+.discord-server {
+    text-align: center;
+}
+
+
+.discord-image {
+    max-width: 150px; /* Reduce the width of the image */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 8px; /* Add a slight border radius to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+
+/* Neon Glow Text Animation */
+@keyframes neon-glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(114, 137, 218, 0.8), 0 0 10px rgba(114, 137, 218, 0.8), 0 0 15px rgba(114, 137, 218, 0.8);
+    }
+    50% {
+        text-shadow: none;
+    }
+}
+
+/* Electric Glow Effect on Hover */
+.join-button:hover span {
+    animation: neon-glow 1s infinite;
+}
+
+/* Pulsating Gradient Animation */
+@keyframes pulsate-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Join Button Styles */
+.join-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, #7289da, #5a68a4, #7289da);
+    background-size: 400% 400%;
+    animation: pulsate-gradient 8s linear infinite;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(114, 137, 218, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+/* Glowing Border Animation */
+.join-button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: inherit;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.join-button:hover::before {
+    opacity: 1;
+}
+
+.join-button:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.join-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.join-button span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Neon Glow Border Animation */
+.join-button {
+    box-shadow: 0 0 10px rgba(114, 137, 218, 0.8), 0 0 20px rgba(114, 137, 218, 0.6), 0 0 30px rgba(114, 137, 218, 0.4), 0 0 40px rgba(114, 137, 218, 0.2);
+    animation: border-glow 3s linear infinite;
+}
+
+/* Electric Glow Effect on Hover */
+.join-button:hover span {
+    animation: neon-glow 1s infinite;
+}
+
+/* 3D Rotation Effect on Hover */
+@keyframes rotate-button {
+    0% {
+        transform: perspective(800px) rotateX(10deg) rotateY(-10deg) scale(1);
+    }
+    50% {
+        transform: perspective(800px) rotateX(12deg) rotateY(-12deg) scale(1.1);
+    }
+    100% {
+        transform: perspective(800px) rotateX(10deg) rotateY(-10deg) scale(1);
+    }
+}
+
+.join-button:hover {
+    animation: rotate-button 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+/* 3D Tilt Effect on Hover */
+@keyframes tilt-effect {
+    0% {
+        transform: perspective(800px) rotateX(10deg) rotateY(-10deg);
+    }
+    50% {
+        transform: perspective(800px) rotateX(12deg) rotateY(-12deg);
+    }
+    100% {
+        transform: perspective(800px) rotateX(10deg) rotateY(-10deg);
+    }
+}
+
+.join-button:hover {
+    animation: tilt-effect 1s ease-in-out infinite;
+}
+
+/* Glowing Pulse Animation on Click */
+.join-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgba(114, 137, 218, 0.4);
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+}
+
+.join-button:active::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    animation: glowing-pulse 0.8s ease-in-out;
+}
+
+@keyframes glowing-pulse {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+/* Heartbeat Animation on Hover */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.join-button:hover {
+    animation: heartbeat .7s infinite;
+}
+
+
+h1 {
+    font-family: Arial;
+    color: #6d4242;
+    font-weight: bold;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px; /* Optional: Add some padding to create space around the h1 element */
+  }
+
+
+.custom-background {
+    /* Styles for the new div acting as a container with the custom background */
+    background-image: url("AFT.gif"); /* Replace "path/to/custom-bg.png" with the actual path to your custom PNG image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Add any other styles for the container div if needed */
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #210074;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #3366cc;
+    border-bottom: 2px solid #3366cc;
+    padding-bottom: 10px;
+}
+
+p {
+    color: #ff1b1b;
+}
+
+h5 {
+    color: darkorange;
+}
+
+a {
+    color: #3366cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align the hamburger icon to the right */
+    align-items: center;
+}
+
+.menu-icon {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: #ff610c;
+    margin: 5px;
+}
+
+/*???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Start the sidebar off-screen */
+    width: 150px;
+    height: 100%;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.2) inset;
+    z-index: 1000; /* Ensure the sidebar is on top of other elements */
+    background-color: #333; /* Sidebar background color */
+    color: #fff; /* Text color in the sidebar */
+    padding: 10px;
+    transform: translateX(100%); 
+    transition: right 0.3s ease, background-color 0.3s ease;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    backdrop-filter: blur(12px); /* Add a cool blurred background */
+}
+
+.sidebar.open {
+    transform: translateX(0); /* Show the sidebar by sliding it in */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 50px rgba(255, 255, 255, 0.3) inset;
+}
+
+/* Change the appearance of the hamburger icon when the sidebar is open */
+.menu-icon.open .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the navigation links vertically */
+    justify-content: center; /* Center the navigation links horizontally */
+    height: 100%;
+}
+
+.sidebar li {
+    margin-bottom: 2em; /* Add 2em margin between navigation links */
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+
+.sidebar li a {
+    color: #fff;
+    text-decoration: none;
+    /* Add hover effect to the navigation links */
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li a:hover {
+    background-color: #555;
+}
+
+/* Additional styles when the sidebar is open */
+.sidebar.open {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a shadow to the sidebar */
+    background-color: #333; /* Change the background color when open */
+    right: 0; /* Slide the sidebar in when it's open */
+}
+
+.sidebar li {
+    opacity: 0; /* Hide the navigation links initially */
+    animation: fadeInDown 0.5s ease forwards; /* Add a fadeInDown animation to the links */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the menu in the navbar */
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Hide the sidebar initially on smaller screens */
+    .sidebar {
+        right: -250px;
+    }
+
+    /* Show the sidebar when the open class is added */
+    .sidebar.open {
+        right: 0;
+    }
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.sidebar.open li {
+    opacity: 1; /* Show the navigation links when the sidebar is open */
+    animation: slideIn 0.5s ease forwards; /* Add a slideIn animation to the links */
+}
+
+.sidebar.open li:nth-child(1) {
+    animation-delay: 0.2s; /* Delay the animation for the first link */
+}
+
+.sidebar.open li:nth-child(2) {
+    animation-delay: 0.4s; /* Delay the animation for the second link */
+}
+
+.sidebar.open li:nth-child(3) {
+    animation-delay: 0.6s; /* Delay the animation for the third link */
+}
+
+/* Animation keyframes for fadeInDown effect */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation keyframes for slideIn effect */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Close button style */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Responsive logo style */
+.logo {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    animation: neon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes neon-pulse {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        text-shadow: none;
+    }
+}
+
+/* Subheading style */
+.subheading {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Active link indicator style */
+.sidebar li.active a {
+    background-color: #555;
+}
+
+/* Smooth scrolling */
+.sidebar li a {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar styles */
+.sidebar {
+    /* ... (Copy the styles from the previous code) */
+    background: linear-gradient(135deg, #333, #222);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid #666;
+}
+
+/* Neon Glow Effect */
+.sidebar li a {
+    /* ... (Copy the styles from the previous code) */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* 3D Transformation */
+.sidebar {
+    /* ... (Copy the styles from the previous code) */
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateY(30deg);
+}
+
+.sidebar.open {
+    /* ... (Copy the styles from the previous code) */
+    transform: perspective(800px) rotateY(0);
+}
+
+/* Additional styles when the sidebar is open */
+.sidebar.open {
+    /* ... (Copy the styles from the previous code) */
+    background: linear-gradient(135deg, #222, #111);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+/* Close button style */
+.close-button {
+    /* ... (Copy the styles from the previous code) */
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Active link indicator style */
+.sidebar li.active a {
+    /* ... (Copy the styles from the previous code) */
+    background-color: #ff6600;
+}
+
+/* Hover effect for navigation links */
+.sidebar li a:hover {
+    /* ... (Copy the styles from the previous code) */
+    background-color: #ff3300;
+    transform: scale(1.05) rotateX(5deg);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Custom Cursor */
+body {
+    cursor: url('after_cursor2.png'), auto;
+}
+
+/* Particle Animations */
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #ffffff 1%, transparent 0);
+    background-size: 15px 15px;
+    z-index: -1;
+    pointer-events: none;
+    animation: particles 10s linear infinite;
+}
+
+@keyframes particles {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* Sidebar styles */
+.sidebar {
+    /* ... (Copy the styles from the previous code) */
+    background: linear-gradient(135deg, #333, #222);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid #666;
+    
+}
+
+
+/* Neon Glow Effect */
+.sidebar li a {
+    /* ... (Copy the styles from the previous code) */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* 3D Transformation */
+.sidebar {
+    /* ... (Copy the styles from the previous code) */
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateY(30deg);
+}
+
+.sidebar.open {
+    /* ... (Copy the styles from the previous code) */
+    transform: perspective(800px) rotateY(0);
+}
+
+/* Additional styles when the sidebar is open */
+.sidebar.open {
+    /* ... (Copy the styles from the previous code) */
+    background: linear-gradient(135deg, #222, #111);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+/* Close button style */
+.close-button {
+    /* ... (Copy the styles from the previous code) */
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Active link indicator style */
+.sidebar li.active a {
+    /* ... (Copy the styles from the previous code) */
+    background-color: #ff6600;
+}
+
+/* Hover effect for navigation links */
+.sidebar li a:hover {
+    /* ... (Copy the styles from the previous code) */
+    background-color: #ff3300;
+}
+
+
+.sidebar.open {
+    transform: translateX(0); /* Show the sidebar by sliding it in */
+}
+
+/* Sidebar header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-header .logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 4px solid #fff; /* Add a cool border around the logo */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Add glow effect to the logo */
+}
+
+.sidebar-header h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+
+.sidebar li {
+    margin-bottom: 1.8em; /* Add margin between navigation links */
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+    transition: transform 0.2s ease;
+}
+
+.sidebar li:hover {
+    transform: translateX(6px); /* Add a subtle translation effect on hover */
+}
+

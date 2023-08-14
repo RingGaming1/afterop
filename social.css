@@ -1,0 +1,591 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+footer {
+    padding: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #00FFC8;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #29B6F6;
+}
+
+
+.social-card.instagram:hover {
+    color: palevioletred;
+}
+
+.social-card.youtube:hover {
+    color: red;
+}
+
+.social-card.discord:hover {
+    color: blue;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.social-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    width: 250px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s; /* Added transition for text color */
+}
+
+.social-link i {
+    font-size: 1.8rem;
+}
+
+.social-card.instagram:hover .social-link {
+    color: #FF0080; /* Pink */
+}
+
+.social-card.youtube:hover .social-link {
+    color: #FF0000; /* Red */
+}
+
+.social-card.discord:hover .social-link {
+    color: #7289DA; /* Blue */
+}
+
+.social-card.instagram:hover .social-link i {
+    color: #FF0080; /* Pink */
+}
+
+.social-card.youtube:hover .social-link i {
+    color: #FF0000; /* Red */
+}
+
+.social-card.discord:hover .social-link i {
+    color: #7289DA; /* Blue */
+}
+
+footer {
+    margin-top: 30px;
+    opacity: 0.7;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+footer h3 a {
+    color: blue;
+}
+
+footer h33 a {
+    color: red;
+}
+
+
+
+
+
+
+/* Add this CSS to your existing stylesheet */
+
+/* Position the sidebar container */
+.sidebar-container {
+    position: fixed;
+    top: 20px;
+    right: -350px;
+    width: 300px;
+    height: 100%;
+    background-color: #1e1e1e;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: right 0.3s ease;
+    /* Add more styles as needed */
+}
+
+/* Open the sidebar when the 'open' class is added */
+.sidebar-container.open {
+    right: 0;
+}
+
+/* Add styles for the button/icon that toggles the sidebar */
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    /* Add more styles as needed */
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Change the appearance of the lines when the sidebar is open */
+.menu-icon.open .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/*???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Start the sidebar off-screen */
+    width: 150px;
+    height: 100%;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.2) inset;
+    z-index: 1000; /* Ensure the sidebar is on top of other elements */
+    background-color: #333; /* Sidebar background color */
+    color: #fff; /* Text color in the sidebar */
+    padding: 10px;
+    transform: translateX(100%); 
+    transition: right 0.3s ease, background-color 0.3s ease;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    backdrop-filter: blur(12px); /* Add a cool blurred background */
+}
+
+.sidebar.open {
+    transform: translateX(0); /* Show the sidebar by sliding it in */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3), 0 0 50px rgba(255, 255, 255, 0.3) inset;
+}
+
+/* Change the appearance of the hamburger icon when the sidebar is open */
+.menu-icon.open .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the navigation links vertically */
+    justify-content: center; /* Center the navigation links horizontally */
+    height: 100%;
+}
+
+.sidebar li {
+    margin-bottom: 2em; /* Add 2em margin between navigation links */
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+
+.sidebar li a {
+    color: #fff;
+    text-decoration: none;
+    /* Add hover effect to the navigation links */
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li a:hover {
+    background-color: #555;
+}
+
+/* Additional styles when the sidebar is open */
+.sidebar.open {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a shadow to the sidebar */
+    background-color: #333; /* Change the background color when open */
+    right: 0; /* Slide the sidebar in when it's open */
+}
+
+.sidebar li {
+    opacity: 0; /* Hide the navigation links initially */
+    animation: fadeInDown 0.5s ease forwards; /* Add a fadeInDown animation to the links */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the menu in the navbar */
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Hide the sidebar initially on smaller screens */
+    .sidebar {
+        right: -250px;
+    }
+
+    /* Show the sidebar when the open class is added */
+    .sidebar.open {
+        right: 0;
+    }
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.sidebar.open li {
+    opacity: 1; /* Show the navigation links when the sidebar is open */
+    animation: slideIn 0.5s ease forwards; /* Add a slideIn animation to the links */
+}
+
+.sidebar.open li:nth-child(1) {
+    animation-delay: 0.2s; /* Delay the animation for the first link */
+}
+
+.sidebar.open li:nth-child(2) {
+    animation-delay: 0.4s; /* Delay the animation for the second link */
+}
+
+.sidebar.open li:nth-child(3) {
+    animation-delay: 0.6s; /* Delay the animation for the third link */
+}
+
+/* Animation keyframes for fadeInDown effect */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation keyframes for slideIn effect */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Close button style */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Responsive logo style */
+.logo {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    animation: neon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes neon-pulse {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        text-shadow: none;
+    }
+}
+
+/* Subheading style */
+.subheading {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Active link indicator style */
+.sidebar li.active a {
+    background-color: #555;
+}
+
+/* Smooth scrolling */
+.sidebar li a {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar styles */
+.sidebar {
+    /* ... (Copy the styles from the previous code) */
+    background: linear-gradient(135deg, #333, #222);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid #666;
+}
+
+/* Neon Glow Effect */
+.sidebar li a {
+    /* ... (Copy the styles from the previous code) */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* 3D Transformation */
+.sidebar {
+    /* ... (Copy the styles from the previous code) */
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateY(30deg);
+}
+
+.sidebar.open {
+    /* ... (Copy the styles from the previous code) */
+    transform: perspective(800px) rotateY(0);
+}
+
+/* Additional styles when the sidebar is open */
+.sidebar.open {
+    /* ... (Copy the styles from the previous code) */
+    background: linear-gradient(135deg, #222, #111);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+/* Close button style */
+.close-button {
+    /* ... (Copy the styles from the previous code) */
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Active link indicator style */
+.sidebar li.active a {
+    /* ... (Copy the styles from the previous code) */
+    background-color: #ff6600;
+}
+
+/* Hover effect for navigation links */
+.sidebar li a:hover {
+    /* ... (Copy the styles from the previous code) */
+    background-color: #ff3300;
+    transform: scale(1.05) rotateX(5deg);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Custom Cursor */
+body {
+    cursor: url('after_cursor2.png'), auto;
+}
+
+/* Particle Animations */
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #ffffff 1%, transparent 0);
+    background-size: 15px 15px;
+    z-index: -1;
+    pointer-events: none;
+    animation: particles 10s linear infinite;
+}
+
+@keyframes particles {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* Sidebar styles */
+.sidebar {
+    /* ... (Copy the styles from the previous code) */
+    background: linear-gradient(135deg, #333, #222);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 1px solid #666;
+    
+}
+
+
+/* Neon Glow Effect */
+.sidebar li a {
+    /* ... (Copy the styles from the previous code) */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* 3D Transformation */
+.sidebar {
+    /* ... (Copy the styles from the previous code) */
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateY(30deg);
+}
+
+.sidebar.open {
+    /* ... (Copy the styles from the previous code) */
+    transform: perspective(800px) rotateY(0);
+}
+
+/* Additional styles when the sidebar is open */
+.sidebar.open {
+    /* ... (Copy the styles from the previous code) */
+    background: linear-gradient(135deg, #222, #111);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+/* Close button style */
+.close-button {
+    /* ... (Copy the styles from the previous code) */
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Active link indicator style */
+.sidebar li.active a {
+    /* ... (Copy the styles from the previous code) */
+    background-color: #ff6600;
+}
+
+/* Hover effect for navigation links */
+.sidebar li a:hover {
+    /* ... (Copy the styles from the previous code) */
+    background-color: #ff3300;
+}
+
+
+.sidebar.open {
+    transform: translateX(0); /* Show the sidebar by sliding it in */
+}
+
+/* Sidebar header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-header .logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 4px solid #fff; /* Add a cool border around the logo */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Add glow effect to the logo */
+}
+
+.sidebar-header h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+
+.sidebar li {
+    margin-bottom: 1.8em; /* Add margin between navigation links */
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+    transition: transform 0.2s ease;
+}
+
+.sidebar li:hover {
+    transform: translateX(6px); /* Add a subtle translation effect on hover */
+}
+
+
+/* Set the position and size of the particle container */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.social-cards {
+    position: relative;
+    z-index: 2; /* Place the social cards above the particles */
+    /* ... other styles ... */
+}

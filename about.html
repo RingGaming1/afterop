@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - AFTER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <body>
+
+</head>
+<body oncontextmenu="return false">
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="language-selector">
+            <div class="selected-language" onclick="toggleLanguageOptions()">
+                <span></span>
+                <span id="current-language">English ▼</span>
+            </div>
+            <div class="language-options" id="language-options">
+                <div class="language-option" onclick="changeLanguage('en')">English</div>
+                <div class="language-option" onclick="changeLanguage('es')">Español</div>
+                <div class="language-option" onclick="changeLanguage('hi')">हिन्दी</div>
+                <div class="language-option" onclick="changeLanguage('fr')">Français</div>
+                <!-- Add more language options as needed -->
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="social.html">Social</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="content" id="content-en" style="display: block;">
+        <div class="gif-container">
+            <img src="AFT.gif" alt="GIF" oncontextmenu="return false" ondragstart="return false">
+        </div>
+        <h1>
+            <span class="letter-1">A</span>
+            <span class="letter-2">F</span>
+            <span class="letter-1">T</span>
+            <span class="letter-2">E</span>
+            <span class="letter-1">R</span>
+        </h1>
+        <p1>Looking for a place to connect, meet new people, and explore the exciting world of dating? You've come to the right place! Our server is designed to provide a safe and inclusive environment where singles can mingle, form connections, and potentially find their special someone.</p>
+        <p2>Our mission is to create a friendly and inclusive environment where people from all walks of life can come together and enjoy each other's company. We believe in fostering a positive and respectful community for everyone.</p>
+        <p3>Whether you're looking for a casual chat, friendship, or a serious relationship, our server offers a wide range of channels and features to cater to your dating needs. Here's what you can expect:</p>
+        <p4>🌟 Friendly Community: Join a welcoming community of like-minded individuals who are eager to share their experiences, offer support, and engage in meaningful conversations.</p>
+        <p5>💑 Matchmaking Opportunities: We provide various channels and events dedicated to matchmaking, allowing you to find others who share your interests, hobbies, and values. Who knows, you might just meet your perfect match!</p>
+        <p6>🎉 Fun Activities: Participate in exciting activities and events such as game nights, movie marathons, and themed discussions. It's a great way to break the ice and get to know other members in a relaxed and enjoyable atmosphere.</p>
+        <p7>📅 Dating Advice and Support: Need some guidance or a friendly ear? Our server offers a space for members to seek dating advice, share success stories, and lend support during the ups and downs of the dating journey.</p>
+        <p8>📢 Community Updates: Stay informed about server announcements, new features, and upcoming events through our regular updates. We strive to keep our server fresh and engaging for everyone.</p>
+        <p9>⚠️ Rules and Moderation: To ensure a safe and respectful environment, we have clear rules in place that promote inclusivity and discourage any form of harassment or inappropriate behavior. Our dedicated moderation team is always available to address any concerns and maintain a positive atmosphere. <a href="https://discord.com/terms" target="_blank" >Terms of Service</a> and <a href="https://discord.com/guidelines" target="_blank" >Community Guidelines</a> </p>
+        <P10>Please remember to respect each other's boundaries, be mindful of others' feelings, and enjoy your time in our server responsibly. We hope you have a wonderful experience and make meaningful connections along the way!</P>
+        <h5>Note: This server is intended for users aged 18 and above. By joining, you confirm that you meet the age requirement.</h6>
+        <div class="discord-server">
+                <a href="https://discord.gg/after-social-chill-nitro-dating-j4j-754991441125572670" class="join-button" target="_blank" onmouseover="playHeartbeatSound()" onmouseout="stopHeartbeatSound()" title="Click to join our server">Join Server</a>
+            </div>
+            <div id="particle-container"></div>
+            <audio id="heartbeat-sound" preload="auto">
+                <source src="Heartbeat Sound.mp3" type="audio/mpeg">
+                <!-- You can add additional source elements here for different audio formats -->
+            </audio>
+        </div>
+
+        <div class="content" id="content-es" style="display: none;">
+            <div class="gif-container">
+                <img src="AFT.gif" alt="GIF" oncontextmenu="return false" ondragstart="return false">
+            </div>
+            <h1>
+                <span class="letter-1">A</span>
+                <span class="letter-2">F</span>
+                <span class="letter-1">T</span>
+                <span class="letter-2">E</span>
+                <span class="letter-1">R</span>
+            </h1>
+            <p1>¿Buscas un lugar para conectar, conocer gente nueva y explorar el emocionante mundo de las citas? ¡Has llegado al lugar adecuado! Nuestro servidor está diseñado para ofrecer un entorno seguro e inclusivo donde los solteros pueden mezclarse, formar conexiones y posiblemente encontrar a esa persona especial.</p>
+            <p2>Nuestra misión es crear un ambiente amigable e inclusivo donde personas de todas las trayectorias de vida puedan reunirse y disfrutar de la compañía de los demás. Creemos en fomentar una comunidad positiva y respetuosa para todos.</p>
+            <p3>Ya sea que estés buscando una charla informal, amistad o una relación seria, nuestro servidor ofrece una amplia variedad de canales y funciones para satisfacer tus necesidades de citas. Aquí tienes lo que puedes esperar:</p>
+            <p4>🌟 Comunidad Amigable: Únete a una comunidad acogedora de personas afines que están ansiosas por compartir sus experiencias, brindar apoyo y participar en conversaciones significativas.</p>
+            <p5>💑 Oportunidades de Emparejamiento: Ofrecemos diversos canales y eventos dedicados al emparejamiento, lo que te permite encontrar a otros que comparten tus intereses, pasatiempos y valores. ¡Quién sabe, podrías encontrar a tu pareja perfecta!</p>
+            <p6>🎉 Actividades Divertidas: Participa en emocionantes actividades y eventos como noches de juegos, maratones de películas y charlas temáticas. Es una excelente manera de romper el hielo y conocer a otros miembros en un ambiente relajado y agradable.</p>
+            <p7>📅 Consejos y Apoyo para Citas: ¿Necesitas orientación o alguien que te escuche? Nuestro servidor ofrece un espacio para que los miembros busquen consejos sobre citas, compartan historias de éxito y brinden apoyo durante los altibajos del camino de las citas.</p>
+            <p8>📢 Actualizaciones de la Comunidad: Mantente informado sobre los anuncios del servidor, nuevas características y próximos eventos a través de nuestras actualizaciones regulares. Nos esforzamos por mantener nuestro servidor fresco y atractivo para todos.</p>
+            <p9>⚠️ Reglas y Moderación: Para garantizar un entorno seguro y respetuoso, tenemos reglas claras establecidas que promueven la inclusividad y desalientan cualquier forma de acoso o comportamiento inapropiado. Nuestro equipo de moderación dedicado siempre está disponible para abordar cualquier inquietud y mantener un ambiente positivo. <a href="https://discord.com/terms" target="_blank">Términos de servicio</a> y <a href="https://discord.com/guidelines" target="_blank">Directrices de la comunidad</a>.</a> </p>
+            <P10>Por favor, recuerda respetar los límites de los demás, ser consciente de los sentimientos de los demás y disfrutar de tu tiempo en nuestro servidor de manera responsable. ¡Esperamos que tengas una experiencia maravillosa y establezcas conexiones significativas en el camino!</P>
+            <h5>Nota: Este servidor está destinado a usuarios de 18 años o más. Al unirte, confirmas que cumples con el requisito de edad.</h6>
+            <div class="discord-server">
+                    <a href="https://discord.gg/after-social-chill-nitro-dating-j4j-754991441125572670" class="join-button" target="_blank" onmouseover="playHeartbeatSound()" onmouseout="stopHeartbeatSound()" title="Click to join our server">Join Server</a>
+                </div>
+                
+                <audio id="heartbeat-sound" preload="auto">
+                    <source src="Heartbeat Sound.mp3" type="audio/mpeg">
+                    <!-- You can add additional source elements here for different audio formats -->
+                </audio>
+            </div>        
+            
+            <div class="content" id="content-hi" style="display: none;">
+                <div class="gif-container">
+                    <img src="AFT.gif" alt="GIF" oncontextmenu="return false" ondragstart="return false">
+                </div>
+                <h1>
+                    <span class="letter-1">A</span>
+                    <span class="letter-2">F</span>
+                    <span class="letter-1">T</span>
+                    <span class="letter-2">E</span>
+                    <span class="letter-1">R</span>
+                </h1>
+                <p1>एक स्थान की तलाश है जहाँ आप जुड़ सकते हैं, नए लोगों से मिल सकते हैं, और डेटिंग की रोमांचक दुनिया का पता लगा सकते हैं? आप सही जगह पर आए हैं! हमारा सर्वर एक सुरक्षित और समावेशी वातावरण प्रदान करने के लिए डिज़ाइन किया गया है जहाँ सिंगल्स मिलकर बातचीत कर सकते हैं, कनेक्शन्स बना सकते हैं, और अपने विशेष किसी को ढूंढ सकते हैं।</p>
+                <p2>हमारा मिशन एक दोस्ताना और समावेशी वातावरण बनाना है जहाँ सभी जीवन के सफरों से लोग एक साथ आ सकें और एक-दूसरे की कंपनी का आनंद उठा सकें। हमें यह मानना है कि हमें सभी के लिए एक सकारात्मक और सम्मानपूर्ण समुदाय को प्रोत्साहित करना चाहिए।</p>
+                <p3>चाहे आप एक अनौपचारिक चैट, दोस्ती या गंभीर संबंध की तलाश में हो, हमारी सर्वर आपकी डेटिंग की आवश्यकताओं को पूरा करने के लिए विभिन्न चैनल और सुविधाएँ प्रदान करता है। यहाँ पर आपकी उम्मीद क्या हो सकती है:</p>
+                <p4>🌟 दोस्ताना समुदाय: एक स्वागतपूर्ण समुदाय में शामिल हों, जो समान विचारधारा वाले व्यक्तियों का साथ है, जो अपने अनुभव साझा करने, सहायता प्रदान करने, और मानसिक वार्तालापों में शामिल होने के इच्छुक हैं।</p>
+                <p5>💑 मिलान-संभावनाएँ: हम विवाह संबंधित विभिन्न माध्यम और घटनाओं की पेशेवरी प्रदान करते हैं, जो आपको आपकी रुचियों, शौकों और मूल्यों को साझा करने वाले दूसरों को ढूंढने की संभावना देते हैं। कौन जानता है, आप शायद अपने सही मिल सकते हैं!</p>
+                <p6>🎉 मजेदार गतिविधियाँ: रोमांचक गतिविधियों और घटनाओं में भाग लें जैसे कि खेली की रातें, मूवी मैराथन, और थीम आलेख। यह एक शांतिपूर्ण और आनंदमय माहौल में बाकी सदस्यों को जानने का एक बढ़िया तरीका है।</p>
+                <p7>📅 डेटिंग सलाह और समर्थन: कुछ मार्गदर्शन या एक दोस्ताना कान? हमारा सर्वर सदस्यों के लिए एक जगह प्रदान करता है जहाँ वे डेटिंग सलाह प्राप्त कर सकते हैं, सफलता की कहानियाँ साझा कर सकते हैं, और डेटिंग की यात्रा के उतार-चढ़ावों के दौरान समर्थन प्रदान कर सकते हैं।</p>
+                <p8>📢 समुदाय अपडेट: हमारे नियमित अपडेट के माध्यम से सर्वर की घोषणाओं, नई सुविधाओं और आगामी घटनाओं के बारे में जानकारी प्राप्त करें। हम सबके लिए सर्वर को ताजगी और आकर्षक बनाए रखने का प्रयास करते हैं।</p>
+                <p9>⚠️ नियम और माध्यस्थता: एक सुरक्षित और सम्मानपूर्ण वातावरण सुनिश्चित करने के लिए, हमारे पास स्पष्ट नियम हैं जो समावेशपन को प्रोत्साहित करते हैं और किसी भी प्रकार के उत्पीड़न या अनुचित व्यवहार को निषेधित करते हैं। हमारी समर्पित माध्यस्थता टीम हमेशा किसी भी चिंता को पूरी करने और एक सकारात्मक वातावरण बनाए रखने के लिए उपलब्ध है। <a href="https://discord.com/terms" target="_blank">सेवा की शर्तें</a> और <a href="https://discord.com/guidelines" target="_blank">समुदाय दिशानिर्देश</a>।</a> </p>
+                <P10>कृपया ध्यान दें कि हमें एक-दूसरे की सीमाओं का आदर करने का समय देना है, दूसरों की भावनाओं का ध्यान रखना है, और हमारे सर्वर में अपने समय का जिम्मेदारीपूर्ण रूप से आनंद लें। हम आशा करते हैं कि आपके पास एक अद्वितीय अनुभव हो और आप मार्ग में मानवार्थपूर्ण संबंध बना सकें!</P>
+                <h5>ध्यान दें: यह सर्वर 18 वर्ष और उससे अधिक आयु के उपयोगकर्ताओं के लिए है। शामिल होकर, आप पुष्टि करते हैं कि आप आयु की आवश्यकता को पूरा करते हैं।</h6>
+                <div class="discord-server">
+                        <a href="https://discord.gg/after-social-chill-nitro-dating-j4j-754991441125572670" class="join-button" target="_blank" onmouseover="playHeartbeatSound()" onmouseout="stopHeartbeatSound()" title="Click to join our server">Join Server</a>
+                    </div>
+                    <div id="particle-container"></div>
+                    <audio id="heartbeat-sound" preload="auto">
+                        <source src="Heartbeat Sound.mp3" type="audio/mpeg">
+                        <!-- You can add additional source elements here for different audio formats -->
+                    </audio>
+            </div>  
+            
+            <div class="content" id="content-fr" style="display: none;">
+                <div class="gif-container">
+                    <img src="AFT.gif" alt="GIF" oncontextmenu="return false" ondragstart="return false">
+                </div>
+                <h1>
+                    <span class="letter-1">A</span>
+                    <span class="letter-2">F</span>
+                    <span class="letter-1">T</span>
+                    <span class="letter-2">E</span>
+                    <span class="letter-1">R</span>
+                </h1>
+                <p1>À la recherche d'un endroit pour se connecter, rencontrer de nouvelles personnes et explorer le monde passionnant des rencontres ? Vous êtes au bon endroit ! Notre serveur est conçu pour offrir un environnement sûr et inclusif où les célibataires peuvent se mêler, établir des liens et éventuellement trouver la personne qui leur est spéciale.</p>
+                <p2>Notre mission est de créer un environnement convivial et inclusif où les gens de tous horizons peuvent se rassembler et apprécier la compagnie les uns des autres. Nous croyons en la promotion d'une communauté positive et respectueuse pour tous.</p>
+                <p3>Que vous cherchiez une conversation décontractée, une amitié ou une relation sérieuse, notre serveur propose une large gamme de canaux et de fonctionnalités pour répondre à vos besoins en matière de rencontres. Voici à quoi vous pouvez vous attendre :</p>
+                <p4>🌟 Communauté Accueillante : Rejoignez une communauté chaleureuse de personnes partageant les mêmes idées qui sont désireuses de partager leurs expériences, d'offrir du soutien et de participer à des conversations significatives.</p>
+                <p5>💑 Opportunités de mise en relation : Nous proposons divers canaux et événements dédiés à la mise en relation, vous permettant de rencontrer d'autres personnes partageant vos centres d'intérêt, hobbies et valeurs. Qui sait, vous pourriez bien rencontrer votre partenaire idéal !</p>
+                <p6>🎉 Activités amusantes : Participez à des activités et événements passionnants tels que des soirées de jeux, des marathons de films et des discussions à thème. C'est un excellent moyen de briser la glace et de faire connaissance avec les autres membres dans une atmosphère détendue et agréable.</p>
+                <p7>📅 Conseils et soutien en matière de rencontres : Besoin de conseils ou d'une oreille attentive ? Notre serveur offre un espace aux membres pour rechercher des conseils en matière de rencontres, partager des histoires de succès et apporter du soutien lors des hauts et des bas du parcours amoureux.</p>
+                <p8>📢 Mises à jour de la communauté : Restez informés des annonces du serveur, des nouvelles fonctionnalités et des événements à venir grâce à nos mises à jour régulières. Nous nous efforçons de maintenir notre serveur dynamique et captivant pour tous.</p>
+                <p9>⚠️ Règles et modération : Afin de garantir un environnement sûr et respectueux, nous avons mis en place des règles claires qui favorisent l'inclusivité et découragent toute forme de harcèlement ou de comportement inapproprié. Notre équipe de modération dédiée est toujours disponible pour répondre à toutes les préoccupations et maintenir une ambiance positive. Consultez nos <a href="https://discord.com/terms" target="_blank" >Conditions d'utilisation</a> et nos <a href="https://discord.com/guidelines" target="_blank" >Directives de la communauté</a></p>
+                <P10>N'oubliez pas de respecter les limites de chacun, de prendre en compte les sentiments des autres et de profiter de votre temps sur notre serveur de manière responsable. Nous espérons que vous vivrez une expérience formidable et établirez des connexions significatives en chemin !</P>
+                <h5>Note : Ce serveur est destiné aux utilisateurs âgés de 18 ans et plus. En rejoignant, vous confirmez que vous répondez à l'exigence d'âge.</h6>
+                <div class="discord-server">
+                        <a href="https://discord.gg/after-social-chill-nitro-dating-j4j-754991441125572670" class="join-button" target="_blank" onmouseover="playHeartbeatSound()" onmouseout="stopHeartbeatSound()" title="Click to join our server">Join Server</a>
+                    </div>
+                    <div id="particle-container"></div>
+                    <audio id="heartbeat-sound" preload="auto">
+                        <source src="Heartbeat Sound.mp3" type="audio/mpeg">
+                        <!-- You can add additional source elements here for different audio formats -->
+                    </audio>
+            </div>            
+            
+    </main>
+
+    <script src="about_script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+body {
+    background-color: rgb(67, 65, 65);
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for opacity */
+    z-index: -1;
+}
+
+h1 {
+    font-family: Arial;
+    color: #6d4242;
+    font-weight: bold;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px; /* Optional: Add some padding to create space around the h1 element */
+  }
+
+  h1 {
+    margin: 0; /* Optional: Remove any default margin for the h1 element */
+  }
+
+
+p {
+    font-family: Arial;
+    color: #0099ff;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+h3 a {
+    color: aquamarine;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: initial;
+}
+
+/* Animation styles */
+.intro-container {
+    font-size: 10rem;
+    color: transparent;
+    text-align: center;
+    position: absolute;
+    bottom: 50%; /* Adjust this value to position the intro higher or lower */
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.animated-letter {
+    animation: fadeInFromTransparent 1s forwards;
+}
+
+@keyframes fadeInFromTransparent {
+    to {
+        color: #40ddf2; /* Change this to your desired color */
+        opacity: 1;
+    }
+}
+
+/* Delay each letter's animation */
+.animated-letter:nth-child(2) { animation-delay: var(--delay); }
+.animated-letter:nth-child(3) { animation-delay: calc(var(--delay) + 0.2s); }
+.animated-letter:nth-child(4) { animation-delay: calc(var(--delay) + 0.4s); }
+.animated-letter:nth-child(5) { animation-delay: calc(var(--delay) + 0.6s); }
+
+/* Hide main content initially */
+.content {
+    display: none;
+}
+
+
+/*??????????????????????that buttons on top ???????????????????????????????????????????????????
+        /* Futuristic button styles */
+        .top-bar {
+            background-color: (67, 65, 65);;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            perspective: 1000px;
+        }
+
+
+        .top-bar a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 0.8cm;
+            border: 2px solid #06beb6;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            background: linear-gradient(45deg, #06beb6, #48b1bf);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transform: perspective(500px) rotateY(0deg) scale(1);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.2s, border-color 0.2s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .top-bar a::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #06beb6, #48b1bf);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s;
+            z-index: -1;
+        }
+
+        .top-bar a:hover {
+            transform: perspective(500px) rotateY(10deg) scale(1.05);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+            border-color: #06beb6;
+        }
+
+        .top-bar a:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Text animation */
+        .top-bar a span {
+            display: inline-block;
+            transform: translateY(100%);
+            transition: transform 0.2s;
+        }
+
+        .top-bar a:hover span {
+            transform: translateY(0);
+        }
+
+        .top-bar a[data-preview] {
+            cursor: pointer;
+        }
+
+        .top-bar a:hover {
+            /* Existing styles */
+            box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.6); /* Change shadow color to white */
+            border-color: #fff; /* Change border color to white */
+        }
+        
+/*?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
